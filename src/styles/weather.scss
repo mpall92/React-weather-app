@@ -1,0 +1,150 @@
+
+
+body {
+  background: #a0dbf2;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.weather-forecast-wrapper {
+  margin: 0 auto;
+  header {
+    text-align: center;
+    .heading {
+      font-size: 22px;
+      color: #20689c;
+      padding: 25px 0 0 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .weather-dashboard {
+    text-align: center;
+
+    .error {
+      display: none;
+    }
+
+    section.controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      .search {
+        cursor: pointer;
+        font-size: 13px;
+        padding: 10px;
+        display: inline-block;
+        background: #20689c;
+        border: 1px solid #a0dbf2;
+        color: #fff;
+      }
+
+      input {
+        font-size: 13px;
+        padding: 10px;
+        display: inline-block;
+        background: #20689c;
+        border: none;
+        color: #fff;
+        width: 230px;
+        &::placeholder {
+          color: #fff;
+        }
+
+        &:focus {
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+
+    &.invalid-city {
+      section.controls {
+        input {
+          background: #ff1744;
+        }
+      }
+
+      .error {
+        display: block;
+        color: #ff1744;
+        padding: 0 0 30px 0;
+      }
+    }
+  }
+
+  .forecast-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .forecast-card {
+      min-height: 100px;
+      background: #20689c;
+      margin: 3px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+
+
+      .icon {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #5bb0d1;
+        flex-direction: column;
+        font-size: 12px;
+        p{
+          margin-top: 0;
+          font-size: 14px;
+        }
+      }
+
+      .weather-info {
+        padding: 15px;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        justify-content: center;
+
+        .min-max {
+          padding: 10px 10px;
+          font-size: 20px;
+          color: #c7cef5;
+
+          strong {
+            font-weight: bold;
+            color: #fff;
+          }
+        }
+
+        .more-info {
+          padding: 0 10px;
+          font-size: 12px;
+        }
+      }
+
+      .primary-info {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.fork {
+  margin: 30px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+  }
+}
